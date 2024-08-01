@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include<string.h>
+
+char *sentence (char *s1, char *s2);
+
+int main()
+{
+	char str1[] = "This is my frase";
+	char str2[] = "This is short";
+	char *final;
+
+	final =  sentence(str1, str2);
+	printf("The longest sentence is: %s\n",final);
+
+	return(0);
+}
+
+char *sentence(char *s1,char *s2)
+{
+	int len1, len2;
+
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+
+	if (len1 > len2)
+		return (s1);
+	else
+		return(s2);
+}
+
